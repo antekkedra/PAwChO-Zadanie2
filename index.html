@@ -1,0 +1,60 @@
+<p>Wybierz miasto</p>
+
+<form method="post">
+  <label for="country">Wybierz Kraj:</label>
+  <select name="country" id="country" onchange="updateCities()">
+    <option value="">-- Wybierz kraj --</option>
+    <option value="uk">Wielka Brytania</option>
+    <option value="cz">Czechy</option>
+    <option value="pl">Polska</option>
+  </select>
+
+  <label for="city">Wybierz Miasto:</label>
+  <select name="city" id="city">
+    <option value="">-- Wybierz miasto --</option>
+  </select>
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+  function updateCities() {
+    const countrySelect = document.getElementById("country");
+    const citySelect = document.getElementById("city");
+    const selectedCountry = countrySelect.value;
+
+    citySelect.innerHTML = '<option value="">-- Wybierz miasto --</option>';
+
+    if (selectedCountry === "uk") {
+      const cities = ["Londyn"];
+      cities.forEach(city => {
+        const option = document.createElement("option");
+        option.value = city
+        option.textContent = city;
+        citySelect.appendChild(option);
+      });
+    } else if (selectedCountry === "pl") {
+      const cities = ["Lądek", "Lądek-Zdrój", "Lublin"];
+      cities.forEach(city => {
+        const option = document.createElement("option");
+        option.value = city
+        option.textContent = city;
+        citySelect.appendChild(option);
+      });
+    } else if (selectedCountry === "cz") {
+      const cities = ["Praga", "Brno"];
+      cities.forEach(city => {
+        const option = document.createElement("option");
+        option.value = city
+        option.textContent = city;
+        citySelect.appendChild(option);
+      });
+    }
+  }
+</script>
+
+{{if .Name}}
+
+<p>Wybrano: {{.Name}}</p>
+<p>Temperatura: {{.Temperature}}</p>
+<p>Data: {{.Date}}</p>
+{{end}}
