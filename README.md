@@ -1,4 +1,5 @@
 # Zadanie 2
+
 ## Opis rozwiązania
 Zaimplementowany pipeline realizuje następujące etapy:
 
@@ -78,6 +79,13 @@ Efekty działania:
 - [GHCR image](https://github.com/antekkedra/PAwChO-Zadanie2/pkgs/container/zadanie2)
 - [DockerHub cache](https://hub.docker.com/r/antek03/zadanie2-cache)
 
+---
+
 ## Screeny
+
 <img width="760" height="805" alt="image" src="https://github.com/user-attachments/assets/ccc3612d-9f92-4656-8e96-2903477244d3" />
+
 <img width="1092" height="552" alt="zadanie1" src="https://github.com/user-attachments/assets/9c736607-226e-431d-928a-e474040d5b6a" />
+
+<img width="850" height="965" alt="image" src="https://github.com/user-attachments/assets/a32253c4-0f77-41e4-8d6c-5c735f39a8fa" />
+
