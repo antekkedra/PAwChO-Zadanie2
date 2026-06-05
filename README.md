@@ -10,7 +10,7 @@ Zaimplementowany pipeline realizuje następujące etapy:
 
 ---
 
-## Etapy pipeline:
+## Etapy pipeline
 
 - Build obrazu Docker (multi-stage build)
 - Skanowanie obrazu narzędziem Trivy
@@ -36,7 +36,7 @@ W projekcie zastosowano cache typu registry:
 
 - Backend: DockerHub
 - Tryb: max
-- Repozytorium: `docker.io/<login>/zadanie2-cache`
+- Repozytorium: `docker.io/antek03/zadanie2-cache`
 
 Cache przechowuje warstwy budowania, co znacząco skraca czas kolejnych uruchomień pipeline.
 
