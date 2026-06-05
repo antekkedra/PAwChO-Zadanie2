@@ -1,13 +1,11 @@
 # ETAP 1
-FROM golang:1.22-alpine AS builder
+FROM golang:1.25-alpine AS builder
 
 # Informacja o autorze
 LABEL org.opencontainers.image.authors="Antoni Kędra"
 
 # Zmienne środowiskowe pod minimalny binarny plik (wymusza kompilacje statycznej binarki, wymusza kompilację na Linuxie, kompilacja na x86_64)
-ENV CGO_ENABLED=0 \
-    GOOS=linux \
-    GOARCH=amd64
+ENV CGO_ENABLED=0
 
 # Instalacja certyfikatów CA
 RUN apk add --no-cache ca-certificates
